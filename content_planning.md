@@ -1,6 +1,8 @@
 # Planning
 ###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
 
+### Session title: Dynamic collaboration (?)
+
 #### Session organizers: Pedro Henrique P. Braga and Katherine Hébert
 
 [![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
@@ -13,48 +15,81 @@
 
 Address additional important resources that are not covered by the other sessions. The current proposition is to address the:
 
+* Getting (and tracking) dynamic community feedback through issues and pull requests
+* Tracking (and measure?) of author contributions to projects;
 * Application of continuous integration to document development;
 * Integration with data repositories (e.g. OSF); see example here https://osf.io/h2y9p/ 
-* Tracking (and measure?) of author contributions to projects.
-* The creation and hosting of workshop/hackathon/online tutorial websites.
+* _The creation and hosting of workshop/hackathon/online tutorial websites._
 
 :::
 
 #### Specific content
 
-## Walk through signup flow 
+## Part 1: Collaboration tools
 
-*The rest here has been copied from a template. Modify accordingly.*
+### GitHub organisation
+* An easy way to collaborate with a team (or many teams) on a larger project with several repositories
 
-- [Slide to explain the flow](/p/slide-example)
+### Issues and pull-requests
 
-:dart: Sprint Goal
----
-- Identify tasks that can help us raise conversion rate
+* Allows code or document authors to get user/community feedback to keep their packages/code/document up to date with the literature, address issues, add features that other users want to use for their research, etc. in a transparent way
+    * Pull requests allow for contributions from within the team or from other contributors (in a trackable way)
+    * Issues and pull requests are easily linked to each other (e.g. "This PR addresses #1")
+* Discuss and provide examples for issues and feature requests for packages. A few examples below:
+    * [vegan](https://github.com/vegandevs/vegan)
+    * [EcoJulia](https://github.com/EcoJulia)
+    * [Stanford CCB](https://github.com/stanford-ccb)
+    * [Atlas of Living Australia's ALA4R](https://github.com/AtlasOfLivingAustralia/ALA4R)
+    * Even GitHub uses this type of feedback [github/feedback](https://github.com/github/feedback)
 
-:books: Sprint Backlog
----
-- Email invite feature
-- Interview users
+* Hands-on exercise (15 mins):
+    * Create an issue and edit a simple manuscript to fix typos or add ideas through pull-requests
 
-:mag: Sprint Retro
----
-### What we can start Doing
-- New initiatives and experiments we want to start improving
 
-:closed_book: Content
---
-==Importance== (1 - 5) / Name / **Estimate** (1, 2, 3, 5, 8, 13)
-### Development Team:
-- [ ] ==5== Email invite
-  - [x] ==4== Email registration page **5**
-  - [ ] ==5== Email invitees **3**
-- [ ] ==4== Setup e2e test in production **2**
+### Tracking (and showcasing) contributions
 
-### Design Team:
-- [ ] ==4== Interview users **8**
-- [ ] ==5== Build roll-up display content **5**
-- [ ] ==5== Help user discover new features **5**
+#### GitHub insights
 
-## Notes 
-<!-- Other important details discussed during the meeting can be entered here. -->
+Tour of some tools on GitHub to track and see contributions
+* Commits page
+    * 
+* Network graph 
+    * [Covid-19 review](https://github.com/greenelab/covid19-review/network)
+    * [10SR Git and GitHub](https://github.com/ypriverol/github-paper/network)
+
+#### Automatic showcasing 
+
+* [all-contributors]( https://github.com/all-contributors/app)
+* Existing example: Contribution to a review on COVID-19 
+  - [covid19-review](https://github.com/greenelab/covid19-review)
+
+
+#### Github Discussions (*not final*)
+
+* [GitHub Discussions:
+An Exploratory Study of Early Adoption](https://arxiv.org/pdf/2102.05230.pdf)
+* https://github.com/albertkun/21S-ASIAAM-191A/discussions/24
+* https://github.com/HaireLab/community-stress-gradients/discussions/4
+
+## Part 2: Integration tools
+
+### Linking to OSF
+
+[(For us) How to link to OSF](https://help.osf.io/hc/en-us/articles/360019929813-Connect-GitHub-to-a-Project)
+
+Example: https://osf.io/h2y9p/ 
+
+### GitHub Actions
+
+Automation
+
+How to: https://docs.github.com/en/actions/guides/about-continuous-integration
+
+https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3
+
+
+#### Useful material
+
+* [Ten Simple Rules for Taking Advantage of git and GitHub](https://www.biorxiv.org/content/10.1101/048744v3.full)
+
+### 
