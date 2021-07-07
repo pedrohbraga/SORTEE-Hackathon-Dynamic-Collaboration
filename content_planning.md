@@ -1,7 +1,7 @@
 # Planning
 ###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
 
-### Session title: Dynamic collaboration (?)
+### Session title: Dynamic collaboration
 
 #### Session organizers: Pedro Henrique P. Braga and Katherine Hébert
 
@@ -23,11 +23,22 @@ Address additional important resources that are not covered by the other session
 
 :::
 
+### To do list
+
+- [ ] Fill in this document with more context and cleaner links
+- [ ] Apply theme to final .rmd
+- [ ] Make GitHub Action that renders this document as html
+- [ ] Include a little tutorial on a simple Github Action
+- [ ] Set up a Github LFS workflow
+- [ ] Set up an example for an issue and/or pull request prompt
+- [ ] 
+
 #### Specific content
 
 ## Part 1: Collaboration tools
 
 ### GitHub organisation
+
 * An easy way to collaborate with a team (or many teams) on a larger project with several repositories
 
 ### Issues and pull-requests
@@ -73,11 +84,6 @@ An Exploratory Study of Early Adoption](https://arxiv.org/pdf/2102.05230.pdf)
 
 ## Part 2: Integration tools
 
-### Linking to OSF
-
-[(For us) How to link to OSF](https://help.osf.io/hc/en-us/articles/360019929813-Connect-GitHub-to-a-Project)
-
-Example: https://osf.io/h2y9p/ 
 
 ### GitHub Actions
 
@@ -87,9 +93,21 @@ How to: https://docs.github.com/en/actions/guides/about-continuous-integration
 
 https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3
 
+[ find flowchart to explain how it works ]
+
++ show a simple action that runs when an .rmd is changed for example
+
+### Git Large File Storage
+
+
+https://github.com/git-lfs/git-lfs
+
+https://github.com/fulcrumgenomics/fgbio
+
 
 #### Useful material
 
 * [Ten Simple Rules for Taking Advantage of git and GitHub](https://www.biorxiv.org/content/10.1101/048744v3.full)
 
 ### 
+
