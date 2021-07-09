@@ -3,8 +3,8 @@
 ###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
 
 #### Session organizers: 
-* Pedro Henrique P. Braga (Ph.D. candidate at Concordia University) 
-* Katherine Hébert (Ph.D. candidate at Université de Sherbrooke) 
+* Pedro Henrique P. Braga (Ph.D. candidate at Concordia University) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohbraga&color=grey&logo=github)](https://github.com/pedrohbraga) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohp_braga&color=grey&logo=twitter)](https://twitter.com/pedrohp_braga)
+* Katherine Hébert (Ph.D. candidate at Université de Sherbrooke) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=katherinehebert&color=grey&logo=github)](https://github.com/katherinehebert) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=hebert_kat&color=grey&logo=twitter)](https://twitter.com/hebert_kat)
 
 [![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
 
@@ -15,8 +15,8 @@
 - [ ] Apply theme to final .rmd
 - [ ] Make GitHub Action that renders this document as html
 - [ ] Include a little tutorial on a simple Github Action
-- [ ] Set up a Github LFS workflow
-- [ ] Set up an example for an issue and/or pull request prompt 
+- [ ] Set up a Github LFS workflow (*see section on this below... not sure about including this anymore*)
+- [x] Set up an example for an issue and/or pull request prompt 
 
 
 ## Welcome!
