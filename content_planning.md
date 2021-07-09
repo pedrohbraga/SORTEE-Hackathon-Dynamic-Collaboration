@@ -1,45 +1,51 @@
-# Planning
+# Dynamic collaboration
+
 ###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
 
-### Session title: Dynamic collaboration
-
-#### Session organizers: Pedro Henrique P. Braga and Katherine Hébert
+#### Session organizers: 
+* Pedro Henrique P. Braga (Ph.D. candidate at Concordia University) 
+* Katherine Hébert (Ph.D. candidate at Université de Sherbrooke) 
 
 [![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
 
----
 
-### Session content proposition
-
-:::info
-
-Address additional important resources that are not covered by the other sessions. The current proposition is to address the:
-
-* Getting (and tracking) dynamic community feedback through issues and pull requests
-* Tracking (and measure?) of author contributions to projects;
-* Application of continuous integration to document development;
-* Integration with data repositories (e.g. OSF); see example here https://osf.io/h2y9p/ 
-* _The creation and hosting of workshop/hackathon/online tutorial websites._
-
-:::
-
-### To do list
+### To do list (to delete!)
 
 - [ ] Fill in this document with more context and cleaner links
 - [ ] Apply theme to final .rmd
 - [ ] Make GitHub Action that renders this document as html
 - [ ] Include a little tutorial on a simple Github Action
 - [ ] Set up a Github LFS workflow
-- [ ] Set up an example for an issue and/or pull request prompt
-- [ ] 
+- [ ] Set up an example for an issue and/or pull request prompt 
 
-#### Specific content
+
+## Welcome!
+
+We are both coordinators of a student-run, and student-oriented series of R workshops for ecology and biodiversity science ([GitHub here if you're curious](https://github.com/QCBSRworkshops)). These workshops are updated annually by different students, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways. 
+
+We're excited to talk about some of the tools we use for the workshop series, and how they're used by other people for research in ecology and evolutionary biology, and beyond!
+
+### Session overview
+
+:::info
+
+We'll be showing and discussing some of the available resources to manage collaborations dynamically, with transparency and trackability.<br><br>
+
+* Managing teams that work on several projects (or repositories) via **GitHub Organisations**. 
+* Collecting, addressing, and tracking feedback and contributions through **issues and pull requests**.
+* Tracking and showcasing contributions to projects with **GitHub Insights**.
+* Using **GitHub Actions** to apply continuous integration during document development to safely add contributed changes from many users (who use different systems).
+
+:::
+
+
 
 ## Part 1: Collaboration tools
 
 ### GitHub organisation
 
-* An easy way to collaborate with a team (or many teams) on a larger project with several repositories
+* Collaborate with a team (or severak teams) on a larger project with several repositories.
+    * 
 
 ### Issues and pull-requests
 
