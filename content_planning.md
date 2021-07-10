@@ -13,7 +13,7 @@
 
 - [ ] Fill in this document with more context and cleaner links
 - [ ] Apply theme to final .rmd
-- [ ] Make GitHub Action that renders this document as html
+- [x] Make GitHub Action that renders this document as html
 - [ ] Include a little tutorial on a simple Github Action
 - [ ] Set up a Github LFS workflow (*see section on this below... not sure about including this anymore*)
 - [x] Set up an example for an issue and/or pull request prompt 
@@ -21,20 +21,21 @@
 
 ## Welcome!
 
-We are both coordinators of a student-run, and student-oriented series of R workshops for ecology and biodiversity science ([GitHub here if you're curious](https://github.com/QCBSRworkshops)). These workshops are updated annually by different students, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways. 
+We are both coordinators of a student-run, and student-oriented series of R workshops for ecology and biodiversity science: the *Q*uébec *C*entre for *B*iodiversity *S*cience *R Workshop Series* ([GitHub here, if you are curious!](https://github.com/QCBSRworkshops)). These workshops are updated annually by students and postdoctoral fellows, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways.
 
-We're excited to talk about some of the tools we use for the workshop series, and how they're used by other people for research in ecology and evolutionary biology, and beyond!
+We're excited to talk about some of the tools we use for the workshop series, and how both of us and other people use them for research in ecology and evolutionary biology, and beyond!
 
 ### Session overview
 
 :::info
 
-We'll be showing and discussing some of the available resources to manage collaborations dynamically, with transparency and trackability.<br><br>
+We will show and discuss some of the available resources to manage collaborations dynamically, with transparency and trackability.<br><br>
 
 * Managing teams that work on several projects (or repositories) via **GitHub Organisations**. 
 * Collecting, addressing, and tracking feedback and contributions through **issues and pull requests**.
+* Discussing topics relevant to research development using **Github Discussions**.
 * Tracking and showcasing contributions to projects with **GitHub Insights**.
-* Using **GitHub Actions** to apply continuous integration during document development to safely add contributed changes from many users (who use different systems).
+* Using **GitHub Actions** to apply continuous integration during document development to safely add and test contributed changes from many users (who use different systems).
 
 :::
 
@@ -56,8 +57,8 @@ The dynamic nature of these changes makes it *very* hard (and very confusing!) t
     * Each team can have different access to certain repositories
 
     For example: 
-    * This hackathon: github.com/SORTEE-Github-Hackathon
-    * Our workshop series: github.com/QCBSRworkshops
+    * This SORTEE Hackathon: github.com/SORTEE-Github-Hackathon
+    * The Québec Centre for Biodiversity Science R Workshop Series: github.com/QCBSRworkshops
 
 ### Issues and pull-requests
 
@@ -88,7 +89,7 @@ Issues and feature requests are often used in ecology and evolutionary biology r
 
 ### Hands-on exercise (15 mins):
 
-:::info
+::: info
 This exercise's objective is to get a feel for how issues and pull requests work to allow for many changes to occur, even when timelines overlap.
 
 **Prompt:** This document is public, and open to contributions - from you! If you don't have a GitHub account, feel free to make one. You will need an account to write an issue or make a pull-request.
@@ -124,17 +125,74 @@ You can also find tools for automatically showcasing contributions
 
 This is a new tool that is being introduced to GitHub, which is intended as a way to keep broader conversations open. For example, people can discuss a project at a conceptual level, have more in-depth discussions about what outputs *mean* (or don't mean), and more. This is another way of tracking and showcasing contributions outside of code or writing, which are often left out because they happen in private email chains or are simply hard to keep track of.
 
-Here are some examples of Github Discussions:
+You can take a peek on the [Discussions](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/discussions) tab for this repository. But, here are some examples of Github Discussions:
 
 * [Problems in how we use data/GIS](https://github.com/albertkun/21S-ASIAAM-191A/discussions/24)
 * [Why SPEI?](https://github.com/HaireLab/community-stress-gradients/discussions/4)
 
 ## Part 3: Integrating contributions dynamically
 
+### Continuous Integration through GitHub Actions
 
-### GitHub Actions
+Continuous integration (CI) is a practice where developers establish a consistent and automated way to build, package, and test applications and thus integrate their code changes early and often to the main branch or code repository. 
 
-Automation
+Committing code more often detects errors sooner and reduces the amount of code a developer needs to debug when finding the source of an error.
+
+
+### Github Actions in a nurshell
+
+Github Actions can help with task automation within your research development life cycle.
+
+Its basic workflow follows as:
+
+*Include short description*
+
+#### Examples
+
+##### Example #1: This document
+
+To produce this document, we first have written it in **RMarkdown** and then converted it into **HTML** using the parsers **knitr** and **pandoc**.
+
+::: warning
+
+Markdown a type of light-weight markup language, where instead of editing text with [**W**hat-**Y**ou-**S**ee-**I**s-**W**hat-**Y**ou-**G**et](https://en.wikipedia.org/wiki/WYSIWYG) software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and *narrative* in a single file and add formatting elements using plain-text. 
+
+For instance, the above text is written as:
+
+```
+Markdown a type of light-weight markup language, where instead of editing text with 
+[**W**hat-**Y**ou-**S**ee-**I**s-**W**hat-**Y**ou-**G**et](https://en.wikipedia.org/wiki/WYSIWYG) 
+software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and
+*narrative* in a single file and add formatting elements using plain-text. 
+```
+
+With this, each of the components of your project can be tied together and easily re-run when data are updated or changes need to be made to other steps in the research workflow.
+
+Alternatives to **RMarkdown** exist in several languages, including **[Weave.jl](http://weavejl.mpastell.com/stable/#Weave.jl-Scientific-Reports-Using-Julia)** and **[Python-Markdown](https://python-markdown.github.io/)**. *For simplicity, we will use `R` here.*
+
+:::
+
+To obtain the **HTML** file we are looking at, we are required to *render* our **RMarkdown** document using the `R` function called `rmarkdown::render()`.
+
+Every time we make a change to the `dynamic_collaboration_material.Rmd` document, we must go to our directory `docs/` and run `rmarkdown::render()` in our `R` console:
+
+```r 
+rmarkdown::render("dynamic_collaboration_material.Rmd")
+```
+
+This will create a `.html` file within `docs/` called `dynamic_collaboration_material.html`.
+
+**Issue #1**: If multiple users are collaborating, it will make it 
+
+#### Example #2: `R` Packages and `Py`thon Libraries
+
+Take a look into the Github Actions workflow for [PyEI](https://github.com/mggg/ecological-inference) Github repository.
+
+#### Example #3: 
+
+
+#### Setting up your first Github Action
+
 
 How to: https://docs.github.com/en/actions/guides/about-continuous-integration
 
@@ -156,7 +214,7 @@ https://github.com/fulcrumgenomics/fgbio
 
 # Useful material
 
-* [Ten Simple Rules for Taking Advantage of git and GitHub](https://www.biorxiv.org/content/10.1101/048744v3.full)
+* [Ten Simple Rules for Taking Advantage of Git and GitHub](https://www.biorxiv.org/content/10.1101/048744v3.full)
 * [GitHub Discussions:
 An Exploratory Study of Early Adoption](https://arxiv.org/pdf/2102.05230.pdf)
 
