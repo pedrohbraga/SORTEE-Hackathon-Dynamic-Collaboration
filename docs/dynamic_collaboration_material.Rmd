@@ -244,13 +244,13 @@ We have stored this action within the `.github/workflow` directory of our Github
 
 Implemented Github Actions workflows can be found within the **Actions** directory of your Github repository. 
 
-For instance, the action workflow `learn-github-actions` that contain `check-bats-version` can be found at:
+For instance, the action workflow `learn-github-actions` that contains `check-bats-version` can be found at [SORTEE-Hackathon-Dynamic-Collaboration/actions](actions).
 
-[SORTEE-Hackathon-Dynamic-Collaboration/actions](actions)
+We can also see obtain badges for our action: [![learn-github-actions](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/check-bats-version.yaml/badge.svg)](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/check-bats-version.yaml)
 
-### Advanced examples
+## Advanced examples
 
-#### Example #1: This document
+### Example #1: This `.Rmd` document
 
 To produce this document, we first have written it in **RMarkdown** and then converted it into **HTML** using the parsers **knitr** and **pandoc**.
 
@@ -281,9 +281,9 @@ Every time we make a change to the `dynamic_collaboration_material.Rmd` document
 rmarkdown::render("dynamic_collaboration_material.Rmd")
 ```
 
-This will create a `.html` file within `docs/` called `dynamic_collaboration_material.html`.
+This will create a `.html` file within `/docs/` called `dynamic_collaboration_material.html`.
 
-**Issue #1**: If multiple users are collaborating, it will make it 
+**Potential Issue #1**: If multiple users are working on it 
 
 ### Example #2: `R` Packages and `Py`thon Libraries
 
@@ -293,7 +293,6 @@ Take a look into the Github Actions workflow for [PyEI](https://github.com/mggg/
 
 
 ## Setting up your first Github Action
-
 
 How to: https://docs.github.com/en/actions/guides/about-continuous-integration
 

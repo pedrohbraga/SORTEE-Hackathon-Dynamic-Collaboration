@@ -210,6 +210,7 @@
             <ul>
             <li><a href="#continuous-integration-through-github-actions">Continuous Integration through GitHub Actions</a></li>
             <li><a href="#github-actions-in-a-nutshell">Github Actions in a nutshell</a></li>
+            <li><a href="#advanced-examples">Advanced examples</a></li>
             <li><a href="#setting-up-your-first-github-action">Setting up your first Github Action</a></li>
             </ul></li>
             <li><a href="#useful-material">Useful material</a></li>
@@ -450,13 +451,14 @@ jobs:
 <div id="status-of-a-github-action-workflow" class="section level3">
 <h3>Status of a Github Action workflow</h3>
 <p>Implemented Github Actions workflows can be found within the <strong>Actions</strong> directory of your Github repository.</p>
-<p>For instance, the action workflow <code>learn-github-actions</code> that contain <code>check-bats-version</code> can be found at:</p>
-<p><a href="actions">SORTEE-Hackathon-Dynamic-Collaboration/actions</a></p>
+<p>For instance, the action workflow <code>learn-github-actions</code> that contains <code>check-bats-version</code> can be found at <a href="actions">SORTEE-Hackathon-Dynamic-Collaboration/actions</a>.</p>
+<p>We can also see obtain badges for our action: <a href="https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/check-bats-version.yaml"><img src="data:text/plain; charset=utf-8;charset=utf-8,Not%20Found" alt="learn-github-actions" /></a></p>
 </div>
-<div id="advanced-examples" class="section level3">
-<h3>Advanced examples</h3>
-<div id="example-1-this-document" class="section level4">
-<h4>Example #1: This document</h4>
+</div>
+<div id="advanced-examples" class="section level2">
+<h2>Advanced examples</h2>
+<div id="example-1-this-.rmd-document" class="section level3">
+<h3>Example #1: This <code>.Rmd</code> document</h3>
 <p>To produce this document, we first have written it in <strong>RMarkdown</strong> and then converted it into <strong>HTML</strong> using the parsers <strong>knitr</strong> and <strong>pandoc</strong>.</p>
 <div class="warning">
 <p>Markdown is a type of light-weight markup language, where instead of editing text with <a href="https://en.wikipedia.org/wiki/WYSIWYG"><strong>W</strong>hat-<strong>Y</strong>ou-<strong>S</strong>ee-<strong>I</strong>s-<strong>W</strong>hat-<strong>Y</strong>ou-<strong>G</strong>et</a> software (e.g. Microsoft Word, Google Docs), we combine <em>data</em>, <em>code</em>, and <em>narrative</em> in a single file and add formatting elements using plain-text.</p>
@@ -471,9 +473,8 @@ software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and
 <p>To obtain the <strong>HTML</strong> file we are looking at, we are required to <em>render</em> our <strong>RMarkdown</strong> document using the <code>R</code> function called <code>rmarkdown::render()</code>.</p>
 <p>Every time we make a change to the <code>dynamic_collaboration_material.Rmd</code> document, we must go to our directory <code>docs/</code> and run <code>rmarkdown::render()</code> in our <code>R</code> console:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">&quot;dynamic_collaboration_material.Rmd&quot;</span>)</span></code></pre></div>
-<p>This will create a <code>.html</code> file within <code>docs/</code> called <code>dynamic_collaboration_material.html</code>.</p>
-<p><strong>Issue #1</strong>: If multiple users are collaborating, it will make it</p>
-</div>
+<p>This will create a <code>.html</code> file within <code>/docs/</code> called <code>dynamic_collaboration_material.html</code>.</p>
+<p><strong>Potential Issue #1</strong>: If multiple users are working on it</p>
 </div>
 <div id="example-2-r-packages-and-python-libraries" class="section level3">
 <h3>Example #2: <code>R</code> Packages and <code>Py</code>thon Libraries</h3>
