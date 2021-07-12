@@ -3,7 +3,7 @@ on:
      branches:
        - main
      paths:
-       - '**.Rmd'
+       - 'docs/dynamic_collaboration_material.Rmd'
        - '.github/workflows/render-rmd-material.yaml'
   schedule:
        - cron: '0 0 * * *'
