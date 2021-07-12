@@ -80,7 +80,7 @@ These different steps often overlap in some way across contributors, meaning peo
 
 The dynamic nature of these changes makes it *very* hard (_and very confusing!_) to work on a document that gets passed around the group, especially when versions are tracked by updating a file name with initials or a date. 
 
-This is where GitHub comes in!
+This is where **Github** comes in!
 
 ## GitHub Organisation
 
