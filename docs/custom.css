@@ -1,0 +1,39 @@
+/* -----------Sidebar div tips------------- */
+/* from r-pkgs.org and rstudio4edu */
+
+div.puzzle, div.info, div.warning, div.angry {
+    padding: 0.1em;
+    margin: 0.1em 0;
+    padding-left: 10px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    min-height: 100px;
+    color: #15395d;
+    background-color: #edf3f9;
+    border: solid 5px #f9fbfd;
+  }
+
+div.puzzle {
+    color: #15395d;
+    background-color: #edf3f9;
+    border: solid 5px #f9fbfd;
+}
+
+div.info {
+    color: #15395d;
+    background-color: #edf3f9;
+    border: solid 5px #f9fbfd;
+}
+
+div.warning {
+    color: #15395d;
+    background-color: #edf3f9;
+    border: solid 5px #f9fbfd;
+}
+
+div.angry {
+    color: #15395d;
+    background-color: #edf3f9;
+    border: solid 5px #f9fbfd;
+}
