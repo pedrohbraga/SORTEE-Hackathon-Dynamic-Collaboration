@@ -1,6 +1,6 @@
-# SORTEE-Hackaton-AdditionalResources
+# SORTEE Hackathon 04 - Dynamic Collaboration (Promoting the use of Github in Ecology and Evolution)
 
-
+### Access the material
 
 
 ### Status
