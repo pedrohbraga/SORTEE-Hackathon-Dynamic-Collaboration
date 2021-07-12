@@ -1,5 +1,5 @@
 ---
-title: "Dynamic collaboration: Exercise #2"
+title: "Dynamic collaboration"
 subtitle: "SORTEE H04 - Promoting the use of Github in EvoEco"
 date: "`r Sys.Date()`"
 output:
@@ -27,13 +27,23 @@ opts_chunk$set(echo = FALSE,
 opts_knit$set(width=75)
 ```
 
-###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
+###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Additional resources`
 
-#### Session organizers:
-##### Pedro Henrique P. Braga (Ph.D. candidate at Concordia University) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohbraga&color=grey&logo=github)](https://github.com/pedrohbraga) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohp_braga&color=grey&logo=twitter)](https://twitter.com/pedrohp_braga)
-##### Katherine Hébert (Ph.D. candidate at Université de Sherbrooke) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=katherinehebert&color=grey&logo=github)](https://github.com/katherinehebert) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=hebert_kat&color=grey&logo=twitter)](https://twitter.com/hebert_kat)
+##### Session organizers: 
 
-###### Material status and resources:
+##### Pedro Henrique P. Braga$^{-*}$ and Katherine Hébert $^{=*}$
+
+[![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohbraga&color=grey&logo=github)](https://github.com/pedrohbraga) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohp_braga&color=grey&logo=twitter)](https://twitter.com/pedrohp_braga)
+[![badge](https://img.shields.io/static/v1?style=flat&label=&message=katherinehebert&color=grey&logo=github)](https://github.com/katherinehebert) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=hebert_kat&color=grey&logo=twitter)](https://twitter.com/hebert_kat)
+
+<p style="margin : 0; padding-top:0;">
+$^-$ Ph.D. Candidate in Biology at Concordia University, Montréal, Canada.<br>
+$^=$ Ph.D. Candidate in Biology at Université de Sherbrooke, Sherbrooke, Canada.<br>
+$^*$ Equally contributed.
+</p>
+
+### Material status and resources:
+
 [![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
 
 # Welcome!
@@ -43,11 +53,6 @@ _We are both coordinators of a student-run, and student-oriented series of `R` w
 _These workshops are updated annually by students and postdoctoral fellows, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways._
 
 _We are excited to talk about some of the tools we use for the workshop series, and how both of us and other people use them for research in ecology and evolutionary biology, and beyond!_
-
-# Exercise 2
-
-# 
-
 
 :::info
 
@@ -65,9 +70,7 @@ We will show and discuss some of the available resources to manage collaboration
 ## What do we need to prepare for this session?
 
 1. Sign up for a [Github account](https://github.com/);
-2. Your preferred web browser;
-3. [Github Desktop](https://desktop.github.com/);
-4. (_Optional_) Create your own repository (We will do it together!).
+2. (*Optional*) [Github Desktop](https://desktop.github.com/).
 
 # Part 1: Managing collaborations
 
@@ -83,7 +86,7 @@ This is where GitHub comes in!
 
 * Collaborate with a team (or several teams) on a larger project with several repositories.
 
-    * Great for big projects that involve several outputs or sub-projects, so everyone can see each other's work without necessarily writing to the same repository
+    * Great for big projects that involve several outputs or sub-projects, so everyone can see each others work without necessarily writing to the same repository
     * Teams can help to assign roles to groups of people, to keep everyone's goals clear
     * Each team can have different access to certain repositories
 
@@ -91,10 +94,8 @@ This is where GitHub comes in!
     * This SORTEE Hackathon: github.com/SORTEE-Github-Hackathon
     * Québec Centre for Biodiversity Science R Workshop Series: github.com/QCBSRworkshops
     * German Centre for Integrative Biodiversity Research (iDiv): github.com/idiv-biodiversity
-    * 
 
 ## Issues and pull-requests
-
 
 **Issues** allow authors to get user/community feedback to keep their code or document(s) up to date with the literature, address issues, add features that other users want to use for their research.
 
@@ -103,7 +104,7 @@ This is where GitHub comes in!
 * You can also assign specific people to address issues as they arise, which helps to manage who works on what.
 
 
-**Pull requests** allow for contributions from within the team or from other contributors (in a trackable way).
+**Pull requests** allow for contributions from within the team or from other contributors (in a traceable way).
 
 * Issues and pull requests are easily linked to each other (e.g. "This PR addresses #1").
 * Pull requests are checked before including the changes into the "main" version of the project, to avoid "breaking" things accidentally. You can assign certain people to validate pull requests before they can be *merged* into the project.
@@ -111,9 +112,10 @@ This is where GitHub comes in!
 
 Issues and pull-requests are at the heart of GitHub's appeal for collaboration and open science. 
 
-> For our workshop series, we use issues to invite feedback from our community, and to create open task lists for invited developers to address when they update workshop material.
-> For example: https://github.com/QCBSRworkshops/workshop08/issues. 
-> Developers then make changes to the material, submit a pull request, which is then reviewed by the coordination team. This allows us to approve the changes, or give feedback to address any issues in the changes. For example: https://github.com/QCBSRworkshops/workshop08/pull/9.
+> For our workshop series, we use issues to invite feedback from our community, and to create open task lists for invited developers to address when they update workshop material. <br>
+> For example: https://github.com/QCBSRworkshops/workshop08/issues. <br> <br>
+> Developers then make changes to the material, submit a pull request, which is then reviewed by the coordination team. This allows us to approve the changes, or give feedback to address any issues in the changes. <br>
+> For example: https://github.com/QCBSRworkshops/workshop08/pull/9.
 
 Issues and feature requests are often used in ecology and evolutionary biology research, in particular for packages. A few examples below:
 * [vegan](https://github.com/vegandevs/vegan)
@@ -137,7 +139,6 @@ This exercise's objective is to get a feel for how issues and pull requests work
 Here is a passage with some errors:<br>
 
 > This hakkathon has shown me that gitHUB is noT useful at all for collaborrations. It is especially NOT useful for the following things: .
-
 
 :::
 
@@ -177,7 +178,7 @@ Committing code more often detects errors sooner and reduces the amount of code 
 
 ## Github Actions in a nutshell
 
-Github Actions can help with task automation within your research development life cycle.
+[Github Actions](https://docs.github.com/en/actions/guides/about-continuous-integration) can help with task automation within your research development life cycle.
 
 Its basic *workflow* is consisted of *events* that trigger *jobs*, which are sent to *runners* and have specific *steps* with *actions* it must complete.
 
@@ -294,30 +295,11 @@ Take a look into the Github Actions workflow for the [PyEI](https://github.com/m
 
 Take a look into the Github Actions workflow for the [ade4](https://github.com/sdray/ade4) (Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences) `R` package!
 
-## Hands-on-exercise #2: Modifying a Github Action!
+## Hands-on-exercise #2: Modifying a Github Action! (~10 mins)
 
 It is fun-time #2!
 
-We 
-
-
-How to: https://docs.github.com/en/actions/guides/about-continuous-integration
-
-https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3
-
-[ find flowchart to explain how it works ]
-
-+ show a simple action that runs when an .rmd is changed for example
-
-~~### Git Large File Storage
-*actually not sure we need to show this, it might be overkill! It would leave more room for discussion about the features above, which are more concerned with collaboration*
-
-
-https://github.com/git-lfs/git-lfs
-
-https://github.com/fulcrumgenomics/fgbio
-~~
-
+The objective of this part is to: (1) and (2).
 
 # Useful material
 
@@ -325,6 +307,10 @@ https://github.com/fulcrumgenomics/fgbio
 * [GitHub Discussions:
 An Exploratory Study of Early Adoption](https://arxiv.org/pdf/2102.05230.pdf)
 
-### 
+https://github.com/git-lfs/git-lfs
+
+https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3
+
+https://github.com/fulcrumgenomics/fgbio
 
 
