@@ -1,5 +1,7 @@
 on:
   push:
+     branches:
+       - main
      paths:
        - 'docs/dynamic_collaboration_exercise_2.Rmd'
        - '.github/workflows/render-rmd-exercise-2.yaml'

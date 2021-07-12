@@ -11,7 +11,6 @@ Session organizers and material developers: Pedro Henrique P. Braga<sup>- *</sup
 <sup>*</sup> Equally contributed.
 </p>
 
-
 ### Access the material
 
 [Material for this Hackathon's session](https://pedrohbraga.github.io/SORTEE-Hackathon-Dynamic-Collaboration/docs/dynamic_collaboration_material.html)
