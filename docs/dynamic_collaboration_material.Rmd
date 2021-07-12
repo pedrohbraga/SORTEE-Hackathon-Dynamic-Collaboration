@@ -5,15 +5,18 @@ date: "`r Sys.Date()`"
 output:
   rmdformats::downcute:
     self_contained: true
+    code_folding: show
+    thumbnails: false
+    lightbox: true
     css: "custom.css"
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 library(knitr)
 library(rmdformats)
 
 ## Global options
-options(max.print="75")
+options(max.print = "75")
 opts_chunk$set(echo = FALSE,
 	             cache = TRUE,
                prompt = FALSE,
@@ -179,7 +182,6 @@ Continuous integration (CI) is a practice where developers establish a consisten
 
 Committing code more often detects errors sooner and reduces the amount of code a developer needs to debug when finding the source of an error.
 
-
 ## Github Actions in a nutshell
 
 Github Actions can help with task automation within your research development life cycle.
@@ -190,38 +192,66 @@ Its basic *workflow* is consisted of *events* that trigger *jobs*, which are sen
 ![](https://docs.github.com/assets/images/help/images/overview-actions-design.png)
 </center>
 
-An example follows below:
+**Let us begin with the following example!**
 
 <center>
 ![](https://docs.github.com/assets/images/help/images/overview-actions-event.png)
 </center>
 
-The workflow is set in a `.yaml` file stored within the `.github/workflow` directory of your Github repository.
+The instructions to run the above workflow is set in a `.yaml` file stored within the `.github/workflow` directory of your Github repository.
 
-The `YAML` file for the above workflow would look like this: 
+The `YAML` file for the above workflow can be written like this:
 
 ```
-on: 
+on: [push]
+
+name: learn-github-actions
 
 jobs:
-  setup:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: ./setup_server.sh
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - run: ./build_server.sh
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: ./test_server.sh
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Install node
+        uses: actions/setup-node@v1
+      
+      - name: Install bats
+        run: npm install -g bats
+        
+      - name: Run bats  
+        run: bats -v
 ```
 
-*Include short description*
+Specifically, the workflow can be detailed as:
 
+1. `name` sections: which provide names to the entire workflow and its steps;
+
+2. `on`: indicates the events that trigger this workflow. In this case, it will run whenever one pushes a commit to the repository;
+
+3. `jobs`: defines the jobs that will be run when trigger by the `on:` event. In this case, `check-bats-version` (a user-defined name) `runs-on` the latest version of the Ubuntu OS;
+
+4. `steps`: contains all actions that will be executed by the job. Our case contains four actions, two `uses:` predefined **Github Actions**, and two `run:`s commands that are executed directly in the OS terminal;
+   a. The first step `uses:` the action hosted at `actions/checkout` on the branch or tag `v2`. This action allows one to check out the repository so the other actions can access and work at your repository. We can see more about this action [here](https://github.com/marketplace/actions/checkout);
+   b. The second `uses:` the action hosted at the `actions/setup-node` repository on the `v1` branch or tag. This action installs and set up `Node.js` runtime environment within the runner;
+   c. The third step `run:` a command that will install `bats` (which stands for [_Bash Automated Testing System_](http://manpages.ubuntu.com/manpages/cosmic/man1/bats.1.html));
+   d. The final fourth step `run:` the command `bats -v` to check the version of `bats`.
+   
+We have stored this action within the `.github/workflow` directory of our Github repository.
+
+### Status of a Github Action workflow
+
+Implemented Github Actions workflows can be found within the **Actions** directory of your Github repository. 
+
+For instance, this ones can be found at:
+
+[SORTEE-Hackathon-Dynamic-Collaboration/actions](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions)
+
+
+
+
+.
 ### Examples
 
 #### Example #1: This document
@@ -230,12 +260,12 @@ To produce this document, we first have written it in **RMarkdown** and then con
 
 ::: warning
 
-Markdown a type of light-weight markup language, where instead of editing text with [**W**hat-**Y**ou-**S**ee-**I**s-**W**hat-**Y**ou-**G**et](https://en.wikipedia.org/wiki/WYSIWYG) software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and *narrative* in a single file and add formatting elements using plain-text. 
+Markdown is a type of light-weight markup language, where instead of editing text with [**W**hat-**Y**ou-**S**ee-**I**s-**W**hat-**Y**ou-**G**et](https://en.wikipedia.org/wiki/WYSIWYG) software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and *narrative* in a single file and add formatting elements using plain-text. 
 
 For instance, the above text is written as:
 
 ```
-Markdown a type of light-weight markup language, where instead of editing text with 
+Markdown is a type of light-weight markup language, where instead of editing text with 
 [**W**hat-**Y**ou-**S**ee-**I**s-**W**hat-**Y**ou-**G**et](https://en.wikipedia.org/wiki/WYSIWYG) 
 software (e.g. Microsoft Word, Google Docs), we combine *data*, *code*, and
 *narrative* in a single file and add formatting elements using plain-text. 
