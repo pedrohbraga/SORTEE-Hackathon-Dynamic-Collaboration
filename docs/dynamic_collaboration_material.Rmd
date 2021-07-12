@@ -1,5 +1,5 @@
 ---
-title: "Dynamic collaboration"
+title: "Dynamic collaboration: Exercise #2"
 subtitle: "SORTEE H04 - Promoting the use of Github in EvoEco"
 date: "`r Sys.Date()`"
 output:
@@ -36,16 +36,6 @@ opts_knit$set(width=75)
 ###### Material status and resources:
 [![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
 
-### To do list (to delete!)
-
-- [ ] Fill in this document with more context and cleaner links
-- [ ] Apply theme to final .rmd
-- [x] Make GitHub Action that renders this document as html
-- [ ] Include a little tutorial on a simple Github Action
-- [ ] Set up a Github LFS workflow (*see section on this below... not sure about including this anymore*)
-- [x] Set up an example for an issue and/or pull request prompt 
-
-
 # Welcome!
 
 _We are both coordinators of a student-run, and student-oriented series of `R` workshops for Ecology and Biodiversity Science: the *Q*uébec *C*entre for *B*iodiversity *S*cience *R Workshop Series* ([GitHub here, if you are curious!](https://github.com/QCBSRworkshops))._ 
@@ -54,7 +44,10 @@ _These workshops are updated annually by students and postdoctoral fellows, in t
 
 _We are excited to talk about some of the tools we use for the workshop series, and how both of us and other people use them for research in ecology and evolutionary biology, and beyond!_
 
-## Session overview
+# Exercise 2
+
+# 
+
 
 :::info
 
@@ -281,18 +274,32 @@ Every time we make a change to the `dynamic_collaboration_material.Rmd` document
 rmarkdown::render("dynamic_collaboration_material.Rmd")
 ```
 
-This will create a `.html` file within `/docs/` called `dynamic_collaboration_material.html`.
+This will create a `.html` file within `/docs/` called `dynamic_collaboration_material.html`. However, this will *only* work if we have all packages required to do it, including `rmarkdown` and `rmdformats` (which contains the `downcute` theme)!
 
-**Potential Issue #1**: If multiple users are working on it 
+**Requirement #1**: Any user that would like to work on this document needs to have all required libraries and software installed within their computer, including **R**, (usually) **RStudio**, and the libraries `rmarkdown` and `rmdformats`, at least;
+
+**Requirement #2**: To ensure a standardized output, all collaborating users (in this case, Katherine and Pedro) must have the same versions of the packages and software;
+
+**Requirement #3+**: _Discuss!_
+
+To contour these requirements, we created a Github Action workflow named [`render-rmd-material.yaml`](.github/workflows/render-rmd-material.yaml) that will add some continuous integration to our document development process!
+
+Let us see what our action does!
 
 ### Example #2: `R` Packages and `Py`thon Libraries
 
-Take a look into the Github Actions workflow for [PyEI](https://github.com/mggg/ecological-inference) Github repository.
+We can bring this to a more academic and research-oriented application!
 
-### Example #3: 
+Take a look into the Github Actions workflow for the [PyEI](https://github.com/mggg/ecological-inference) Python library to perform Ecological Inference!
 
+Take a look into the Github Actions workflow for the [ade4](https://github.com/sdray/ade4) (Analysis of Ecological Data: Exploratory and Euclidean Methods in Environmental Sciences) `R` package!
 
-## Setting up your first Github Action
+## Hands-on-exercise #2: Modifying a Github Action!
+
+It is fun-time #2!
+
+We 
+
 
 How to: https://docs.github.com/en/actions/guides/about-continuous-integration
 

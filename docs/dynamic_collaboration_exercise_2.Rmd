@@ -1,0 +1,118 @@
+---
+title: "Dynamic collaboration: Exercise #2"
+subtitle: "SORTEE H04 - Promoting the use of Github in EvoEco"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::downcute:
+    self_contained: true
+    code_folding: show
+    thumbnails: false
+    lightbox: true
+    css: "custom.css"
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print = "75")
+opts_chunk$set(echo = FALSE,
+	             cache = TRUE,
+               prompt = FALSE,
+               tidy = TRUE,
+               comment = NA,
+               message = FALSE,
+               warning = FALSE)
+opts_knit$set(width=75)
+```
+
+###### tags: `Hackathon` `Github` `Ecology` `Evolution` `Aditional resources`
+
+#### Session organizers:
+
+* Pedro Henrique P. Braga (Ph.D. candidate at Concordia University) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohbraga&color=grey&logo=github)](https://github.com/pedrohbraga) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=pedrohp_braga&color=grey&logo=twitter)](https://twitter.com/pedrohp_braga)
+
+* Katherine Hébert (Ph.D. candidate at Université de Sherbrooke) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=katherinehebert&color=grey&logo=github)](https://github.com/katherinehebert) [![badge](https://img.shields.io/static/v1?style=flat&label=&message=hebert_kat&color=grey&logo=twitter)](https://twitter.com/hebert_kat)
+
+###### Material status and resources:
+
+[![hackmd-github-sync-badge](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw/badge)](https://hackmd.io/1PIQCPiqTCOp68BsCcw7Zw)
+
+::: info
+
+The prose below refers to the very short methods and results sections that marks the beginning of our incredible dummy manuscript on Palmer penguins. Our research objective was to explore the relationship between flipper flipper length and body mass in the penguins inhabiting the Palmer archipelago (see figure below).
+
+<center>
+
+![Sourced from the galapagos.org website. ](https://www.galapagos.org/wp-content/uploads/2019/04/PenguinMeasurements_BLOGv3.png)
+
+</center>
+
+Instead of using Word to write our manuscript, we are using RMarkdown to unify prose, code and figure-generation directly in a single document. We are also storing our document on Github, so we can perform version control and collaborate on it.
+
+You can find the repository and the document here: INCLUDE LINK.
+
+Our preliminary results are shown below. Any changes to be applied to this manuscript should be performed via pull requests.
+
+:::
+
+
+## Methods
+
+## Palmer Archipelago (Antarctica) penguin data
+
+The data on three Palmer Archipelago (Antartica) penguin species - Adélie (*Pygoscelis adeliae*), Gentoo penguin (*Pygoscelis papua*) and Chinstrap penguin (*Pygoscelis antarcticus*) - used in our analyses were _manually_ compiled from the original dataset made available by Dr. Kristen Gorman and the Palmer Station (Antarctica LTER, a member of the Long Term Ecological Research Network).
+
+## Statistical analyses
+
+To explore the within-species relationship between penguin flipper length (mm) and body mass (g), we fit per-species simple linear models with flipper length (mm) as predictive variable, and body mass (g) as response variable.
+
+## Results
+
+Our linear models show that body mass consistently increases with flipper length in all penguin species. [<span style="color: red;">*Something has gone terribly wrong! What should we do!*</span>]. 
+
+```{r flipperlength-bodymass-figure, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+penguins <- read.csv("data/palmerpenguins_dataset.csv")
+
+ggplot(data = penguins, 
+                       aes(x = flipper_length_mm,
+                           y = body_mass_g,
+                           group = species,
+                           colour = species)) +
+  geom_point(aes(shape = species),
+             size = 2,
+             alpha = 0.2) +
+  geom_smooth(method = "lm",
+              se = FALSE) +
+  theme_minimal() +
+  scale_color_manual(values = c("darkorange",
+                                "purple",
+                                "cyan4")
+                     ) +
+  labs(title = "Penguin size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme_minimal()
+```
+
+##### Information on this dataset
+
+This very simple exercise uses a subset of the `palmerpenguins` `R` dataset. Original data comes from Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
+
+The references for the `palmerpenguins` data and the original data follows below: 
+
+1. Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218.
+
+2. Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081. doi:10.1371/journal.pone.0090081
+
+3. Adélie penguins: Palmer Station Antarctica LTER and K. Gorman. 2020. Structural size measurements and isotopic signatures of foraging among adult male and female Adélie penguins (Pygoscelis adeliae) nesting along the Palmer Archipelago near Palmer Station, 2007-2009 ver 5. Environmental Data Initiative https://doi.org/10.6073/pasta/98b16d7d563f265cb52372c8ca99e60f
+
+4. Gentoo penguins: Palmer Station Antarctica LTER and K. Gorman. 2020. Structural size measurements and isotopic signatures of foraging among adult male and female Gentoo penguin (Pygoscelis papua) nesting along the Palmer Archipelago near Palmer Station, 2007-2009 ver 5. Environmental Data Initiative https://doi.org/10.6073/pasta/7fca67fb28d56ee2ffa3d9370ebda689
+
+5. Chinstrap penguins: Palmer Station Antarctica LTER and K. Gorman. 2020. Structural size measurements and isotopic signatures of foraging among adult male and female Chinstrap penguin (Pygoscelis antarcticus) nesting along the Palmer Archipelago near Palmer Station, 2007-2009 ver 6. Environmental Data Initiative https://doi.org/10.6073/pasta/c14dfcfada8ea13a17536e73eb6fbe9e
