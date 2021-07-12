@@ -306,11 +306,9 @@ The objective of this part is to: (1) and (2).
 * [Ten Simple Rules for Taking Advantage of Git and GitHub](https://www.biorxiv.org/content/10.1101/048744v3.full)
 * [GitHub Discussions:
 An Exploratory Study of Early Adoption](https://arxiv.org/pdf/2102.05230.pdf)
+* [Automate chores with GitHub Actions](https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3)
 
-https://github.com/git-lfs/git-lfs
+### Other tools
 
-https://blog.esciencecenter.nl/automate-chores-with-github-actions-73153a6c85d3
-
-https://github.com/fulcrumgenomics/fgbio
-
-
+* [fgbio: Tools for working with genomic and high throughput sequencing data](fulcrumgenomics.github.io/fgbio/)
+* [Git Large File Storage (LFS)](https://git-lfs.github.com/)
