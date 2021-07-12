@@ -75,6 +75,7 @@ Our linear models show that body mass consistently increases with flipper length
 ```{r flipperlength-bodymass-figure, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(tidyr)
+library(ggplot2)
 
 penguins <- read.csv("data/palmerpenguins_dataset.csv")
 
