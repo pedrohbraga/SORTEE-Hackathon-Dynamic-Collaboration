@@ -244,15 +244,11 @@ We have stored this action within the `.github/workflow` directory of our Github
 
 Implemented Github Actions workflows can be found within the **Actions** directory of your Github repository. 
 
-For instance, this ones can be found at:
+For instance, the action workflow `learn-github-actions` that contain `check-bats-version` can be found at:
 
-[SORTEE-Hackathon-Dynamic-Collaboration/actions](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions)
+[SORTEE-Hackathon-Dynamic-Collaboration/actions](actions)
 
-
-
-
-.
-### Examples
+### Advanced examples
 
 #### Example #1: This document
 
