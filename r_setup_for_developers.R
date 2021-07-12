@@ -19,7 +19,6 @@ usethis::use_github_action(name = "render-rmarkdown",
                            open = TRUE)
 
 
-
 ### Preparation for Exercise 2 ####
 
 # Install and load tidyverse
