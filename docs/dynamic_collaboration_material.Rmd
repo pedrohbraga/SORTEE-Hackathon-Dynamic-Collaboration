@@ -43,17 +43,20 @@ opts_knit$set(width=75)
 - [x] Set up an example for an issue and/or pull request prompt 
 
 
-## Welcome!
+# Welcome!
 
-_We are both coordinators of a student-run, and student-oriented series of `R` workshops for Ecology and Biodiversity Science: the *Q*uébec *C*entre for *B*iodiversity *S*cience *R Workshop Series* ([GitHub here, if you are curious!](https://github.com/QCBSRworkshops)). These workshops are updated annually by students and postdoctoral fellows, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways._
+_We are both coordinators of a student-run, and student-oriented series of `R` workshops for Ecology and Biodiversity Science: the *Q*uébec *C*entre for *B*iodiversity *S*cience *R Workshop Series* ([GitHub here, if you are curious!](https://github.com/QCBSRworkshops))._ 
+
+_These workshops are updated annually by students and postdoctoral fellows, in two languages (English and French), according to participant feedback we receive each year. This means there are a lot of moving parts, and GitHub helps us track and manage this type of dynamic collaboration in several ways._
 
 _We are excited to talk about some of the tools we use for the workshop series, and how both of us and other people use them for research in ecology and evolutionary biology, and beyond!_
 
-### Session overview
+## Session overview
 
 :::info
 
-We will show and discuss some of the available resources to manage collaborations dynamically, with transparency and trackability.<br><br>
+We will show and discuss some of the available resources to manage collaborations dynamically, with transparency and traceability.
+<br>
 
 * Managing teams that work on several projects (or repositories) via **GitHub Organisations**. 
 * Collecting, addressing, and tracking feedback and contributions through **issues and pull requests**.
@@ -63,16 +66,24 @@ We will show and discuss some of the available resources to manage collaboration
 
 :::
 
+## What do we need to prepare for this session?
 
+1. Sign up for a [Github account](https://github.com/);
+2. Your preferred web browser;
+3. [Github Desktop](https://desktop.github.com/);
+4. (_Optional_) Create your own repository (We will do it together!).
 
-## Part 1: Managing collaborations
+# Part 1: Managing collaborations
 
-Collaborations are rarely static: when people work on projects together, it is a continuously developing process of contributing ideas, giving and getting feedback, and addressing this feedback with changes until a goal is acheived, whether it's a manuscript, a tutorial, a package, etc. These different steps often overlap in some way across contributors, meaning people are actively changing the project at the same time.
+_Collaborations are rarely static_: when people work on projects together, it is a continuously developing process of contributing ideas, giving and getting feedback, and addressing this feedback with changes until a goal is achieved, whether it's a manuscript, a tutorial, a package, etc. 
 
-The dynamic nature of these changes makes it *very* hard (and very confusing!) to work on a document that gets passed around the group, especially when versions are tracked by updating a file name with initials or a date. This is where GitHub comes in!
+These different steps often overlap in some way across contributors, meaning people are actively changing the project at the same time.
 
+The dynamic nature of these changes makes it *very* hard (_and very confusing!_) to work on a document that gets passed around the group, especially when versions are tracked by updating a file name with initials or a date. 
 
-### GitHub Organisation
+This is where GitHub comes in!
+
+## GitHub Organisation
 
 * Collaborate with a team (or several teams) on a larger project with several repositories.
 
@@ -86,7 +97,7 @@ The dynamic nature of these changes makes it *very* hard (and very confusing!) t
     * German Centre for Integrative Biodiversity Research (iDiv): github.com/idiv-biodiversity
     * 
 
-### Issues and pull-requests
+## Issues and pull-requests
 
 
 **Issues** allow authors to get user/community feedback to keep their code or document(s) up to date with the literature, address issues, add features that other users want to use for their research.
@@ -100,11 +111,13 @@ The dynamic nature of these changes makes it *very* hard (and very confusing!) t
 
 * Issues and pull requests are easily linked to each other (e.g. "This PR addresses #1").
 * Pull requests are checked before including the changes into the "main" version of the project, to avoid "breaking" things accidentally. You can assign certain people to validate pull requests before they can be *merged* into the project.
-* This opens the door to external contributors, who can submit code (or writing). 
+* This opens the door to external contributors, who can submit code (or writing).
 
 Issues and pull-requests are at the heart of GitHub's appeal for collaboration and open science. 
 
-> For our workshop series, we use issues to invite feedback from our community, and to create open task lists for invited developers to address when they update workshop material. For example: github.com/QCBSRworkshops/workshop08/issues. Developers then make changes to the material, submit a pull request, which is then reviewed by the coordination team. This allows us to approve the changes, or give feedback to address any issues in the changes. For example: https://github.com/QCBSRworkshops/workshop08/pull/9.
+> For our workshop series, we use issues to invite feedback from our community, and to create open task lists for invited developers to address when they update workshop material.
+> For example: https://github.com/QCBSRworkshops/workshop08/issues. 
+> Developers then make changes to the material, submit a pull request, which is then reviewed by the coordination team. This allows us to approve the changes, or give feedback to address any issues in the changes. For example: https://github.com/QCBSRworkshops/workshop08/pull/9.
 
 Issues and feature requests are often used in ecology and evolutionary biology research, in particular for packages. A few examples below:
 * [vegan](https://github.com/vegandevs/vegan)
@@ -113,29 +126,31 @@ Issues and feature requests are often used in ecology and evolutionary biology r
 * [Atlas of Living Australia's ALA4R](https://github.com/AtlasOfLivingAustralia/ALA4R)
 * Even GitHub uses this type of feedback [github/feedback](https://github.com/github/feedback)
 
-### Hands-on exercise (15 mins):
+## Hands-on exercise (15 mins):
 
 ::: info
 This exercise's objective is to get a feel for how issues and pull requests work to allow for many changes to occur, even when timelines overlap.
 
 **Prompt:** This document is public, and open to contributions - from you! If you don't have a GitHub account, feel free to make one. You will need an account to write an issue or make a pull-request.
+
 * **Option 1**: Open an issue in our repository to make a suggestion about the following passage, or about anything in the document.
 * **Option 2**: Correct errors or add to the following passage, and submit a pull request.
+
 * **Option 3**: There is a small list of resources at the end of this document. If you know of interesting resources about this topic, add one via a pull request, or open an issue to let us know which resource should be added!
 
-<br>
-Here is a passage with some errors:<br><br>
+Here is a passage with some errors:<br>
 
 > This hakkathon has shown me that gitHUB is noT useful at all for collaborrations. It is especially NOT useful for the following things: .
 
 
 :::
 
-## Part 2: Tracking (and showcasing) collaborations
+# Part 2: Tracking (and showcasing) collaborations
 
-### GitHub Insights
+## GitHub Insights
 
-GitHub has several built-in display functionalities to track and see contributions from different users.
+GitHub has several built-in display functions to track and see contributions from different users.
+
 * Commits page
     * [Covid-19 review](https://github.com/greenelab/covid19-review/graphs/commit-activity)
 * Network graph 
@@ -147,7 +162,7 @@ You can also find tools for automatically showcasing contributions
 * [all-contributors]( https://github.com/all-contributors/app)
 
 
-### Github Discussions (*beta*)
+## Github Discussions (*beta*)
 
 This is a new tool that is being introduced to GitHub, which is intended as a way to keep broader conversations open. For example, people can discuss a project at a conceptual level, have more in-depth discussions about what outputs *mean* (or don't mean), and more. This is another way of tracking and showcasing contributions outside of code or writing, which are often left out because they happen in private email chains or are simply hard to keep track of.
 
@@ -156,26 +171,30 @@ You can take a peek on the [Discussions](https://github.com/pedrohbraga/SORTEE-H
 * [Problems in how we use data/GIS](https://github.com/albertkun/21S-ASIAAM-191A/discussions/24)
 * [Why SPEI?](https://github.com/HaireLab/community-stress-gradients/discussions/4)
 
-## Part 3: Integrating contributions dynamically
+# Part 3: Integrating contributions dynamically
 
-### Continuous Integration through GitHub Actions
+## Continuous Integration through GitHub Actions
 
 Continuous integration (CI) is a practice where developers establish a consistent and automated way to build, package, and test applications and thus integrate their code changes early and often to the main branch or code repository. 
 
 Committing code more often detects errors sooner and reduces the amount of code a developer needs to debug when finding the source of an error.
 
 
-### Github Actions in a nutshell
+## Github Actions in a nutshell
 
 Github Actions can help with task automation within your research development life cycle.
 
-Its basic workflow is events that trigger jobs, which are sent to runners and have specific steps with actions it must complete.
+Its basic *workflow* is consisted of *events* that trigger *jobs*, which are sent to *runners* and have specific *steps* with *actions* it must complete.
 
+<center>
 ![](https://docs.github.com/assets/images/help/images/overview-actions-design.png)
+</center>
 
 An example follows below:
 
+<center>
 ![](https://docs.github.com/assets/images/help/images/overview-actions-event.png)
+</center>
 
 The workflow is set in a `.yaml` file stored within the `.github/workflow` directory of your Github repository.
 
@@ -203,9 +222,9 @@ jobs:
 
 *Include short description*
 
-#### Examples
+### Examples
 
-##### Example #1: This document
+#### Example #1: This document
 
 To produce this document, we first have written it in **RMarkdown** and then converted it into **HTML** using the parsers **knitr** and **pandoc**.
 
@@ -240,14 +259,14 @@ This will create a `.html` file within `docs/` called `dynamic_collaboration_mat
 
 **Issue #1**: If multiple users are collaborating, it will make it 
 
-#### Example #2: `R` Packages and `Py`thon Libraries
+### Example #2: `R` Packages and `Py`thon Libraries
 
 Take a look into the Github Actions workflow for [PyEI](https://github.com/mggg/ecological-inference) Github repository.
 
-#### Example #3: 
+### Example #3: 
 
 
-#### Setting up your first Github Action
+## Setting up your first Github Action
 
 
 How to: https://docs.github.com/en/actions/guides/about-continuous-integration
