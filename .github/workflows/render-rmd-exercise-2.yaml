@@ -1,7 +1,7 @@
 on:
   push:
      paths:
-       - 'dynamic_collaboration_exercise_2.Rmd'
+       - 'docs/dynamic_collaboration_exercise_2.Rmd'
        - '.github/workflows/render-rmd-exercise-2.yaml'
   schedule:
        - cron: '0 0 * * *'
