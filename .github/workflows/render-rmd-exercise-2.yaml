@@ -1,0 +1,95 @@
+on:
+  push:
+     paths:
+       - 'dynamic_collaboration_exercise_2.Rmd'
+       - '.github/workflows/render-rmd-exercise-2.yaml'
+  schedule:
+       - cron: '0 0 * * *'
+       
+name: render-rmarkdown-exercise-2
+
+jobs:
+  render-rmarkdown-exercise-2:
+    name: Render the RMarkdown exercise 2 report
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs    
+    env:
+      GITHUB_PAT: ${{ secrets.ACCESS_TOKEN }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        
+    steps:
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v2
+
+      - name: 💻 Setup R
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: 4.0.3
+        
+      - name: 💾 Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key:  r-${{ hashFiles('DESCRIPTION') }}
+
+      - name: 💻 Install pandoc and pandoc citeproc
+        uses: r-lib/actions/setup-pandoc@v1
+        
+      - name: Install TinyTeX
+        uses: r-lib/actions/setup-tinytex@v1
+        env:
+          # install full pre-built version
+          TINYTEX_INSTALLER: TinyTeX        
+    
+      - name: 💻 Install R packages and dependencies if needed
+        run: |
+          Rscript -e 'list.of.packages <- c("rmarkdown", "bookdown", "rmdformats"); 
+          new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]; 
+          if(length(new.packages) > 0) {
+          install.packages(new.packages, dependencies = TRUE)
+          print(paste0("The following package was installed:", new.packages))} else
+          if(length(new.packages) == 0) {
+          print("All packages have been previously installed and fetched from cache.")}'
+          
+      - name: 🧶 Render the RMarkdown document 
+        run: Rscript -e 'rmarkdown::render("dynamic_collaboration_exercise_2.Rmd")'
+
+      - name: 🔺 Upload artifact containing the report
+        uses: actions/upload-artifact@v1
+        with:
+          name: dynamic_collaboration_exercise_2
+          path: docs/  # uploads any file with this prefix in the root directory
+  
+# Requires the creation of an empty gh-pages branch
+# see https://pkgdown.r-lib.org/reference/deploy_site_github.html
+# and also secrets for ACCESS_TOKEN
+
+  checkout-and-deploy:
+   name: Checkout and deploy the Rmarkdown exercise 2 within the gh-pages repository
+   runs-on: ubuntu-latest
+   needs: render-rmarkdown-exercise-2
+   
+   steps:
+      - name: 🛎️ Checkout again
+        uses: actions/checkout@v2.3.1 # If you are using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+          
+      - name: 🔻 Download artifact containing the report
+        uses: actions/download-artifact@v1
+        with:
+         # Artifact name
+         name: dynamic_collaboration_exercise_2 # optional
+         # Destination path
+         path: docs/ # optional
+
+      - name: 💎 Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/
+          TARGET_FOLDER: docs/
+          CLEAN: true
