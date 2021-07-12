@@ -73,7 +73,8 @@ To explore the within-species relationship between penguin flipper length (mm) a
 Our linear models show that body mass consistently increases with flipper length in all penguin species. [<span style="color: red;">*Something has gone terribly wrong! What should we do!*</span>]. 
 
 ```{r flipperlength-bodymass-figure, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 
 penguins <- read.csv("data/palmerpenguins_dataset.csv")
 
