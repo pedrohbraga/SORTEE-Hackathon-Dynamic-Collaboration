@@ -1,5 +1,3 @@
-on: [hello]
-
 name: learn-github-actions
 
 jobs:
