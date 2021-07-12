@@ -14,12 +14,12 @@ Session organizers and material developers: Pedro Henrique P. Braga<sup>- *</sup
 
 ### Access the material
 
-[Material for this Hackathon's session](https://pedrohbraga.github.io/SORTEE-Hackathon-Dynamic-Collaboration/docs/dynamic_collaboration_material.html)
+[Material for this Hackathon's session](https://sortee-github-hackathon.github.io/SORTEE-Hackathon-Dynamic-Collaboration/docs/dynamic_collaboration_material.html)
 
-[Material for Exercise 2](https://pedrohbraga.github.io/SORTEE-Hackathon-Dynamic-Collaboration/docs/dynamic_collaboration_exercise_2.html)
+[Material for Exercise 2](https://sortee-github-hackathon.github.io/SORTEE-Hackathon-Dynamic-Collaboration/docs/dynamic_collaboration_exercise_2.html)
 
 ### Status
 
-[![render-rmarkdown-material](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-material.yaml/badge.svg)](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-material.yaml)
+[![render-rmarkdown-material](https://github.com/SORTEE-Github-Hackathon/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-material.yaml/badge.svg)](https://github.com/SORTEE-Github-Hackathon/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-material.yaml)
 
-[![render-rmarkdown-exercise-2](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-exercise-2.yaml/badge.svg)](https://github.com/pedrohbraga/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-exercise-2.yaml)
+[![render-rmarkdown-exercise-2](https://github.com/SORTEE-Github-Hackathon/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-exercise-2.yaml/badge.svg)](https://github.com/SORTEE-Github-Hackathon/SORTEE-Hackathon-Dynamic-Collaboration/actions/workflows/render-rmd-exercise-2.yaml)
